@@ -1,0 +1,45 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WindowsFormsApp1
+{
+    public class JetCoaster
+    {
+       
+        public static int ride
+            (int k, int[] g, int r)
+        {
+            int youso = 0;
+            int goukei = 0;
+
+            while (r > 0) 
+            {
+                int i = 0;
+                
+                while (i<k+1) 
+                {
+                    i += g[youso];
+                    if(i>k)
+                    {
+                        i -= g[youso];
+                        goukei += i;
+                     
+                        break;
+                    }
+                    youso += 1;
+                    if (youso>g.Length-1) 
+                    {
+                        youso = 0;
+                    }
+                }
+               r -= 1;
+            }
+            return goukei ;
+        }
+ 
+
+    }
+}
