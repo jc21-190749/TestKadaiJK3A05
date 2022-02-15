@@ -8,13 +8,15 @@ namespace WindowsFormsApp1
 {
     public class JetCoaster
     {
-       
+
         public static int ride
             (int k, int[] g, int r)
         {
             int youso = 0;
             int goukei = 0;
-
+            if (g.Length==0){
+                return 0;
+            }
             while (r > 0) 
             {
                 int i = 0;
