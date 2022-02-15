@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
             while (r > 0) 
             {
                 int i = 0;
-                int count = 0; 
+                int count = youso; 
                 while (i<k+1) 
                 {
                     i += g[youso];
@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
                     {
                         youso = 0;
                     }
-                    if (g.Length==count)
+                    if (youso==count)
                     {
                         goukei += i;
                         break;
